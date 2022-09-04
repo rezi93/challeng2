@@ -98,3 +98,41 @@ input{
     border-bottom-color:hsl(249, 99%, 64%) ;
     border-left-color:hsl(278, 94%, 30%) ;
 }
+input::placeholder{font-weight: 300;}
+.errors,.errors-num,.errors-MM,.errors-cvc{
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+.wraper{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.date{
+    width: 50px;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+.cardcvc{
+    width: 50px;
+    
+    margin-right: 80px;
+    margin-bottom: 40px;
+}
+#submit{
+    all: unset;
+    width: 250px;
+    height: 40px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    cursor: pointer;
+}
+
+
