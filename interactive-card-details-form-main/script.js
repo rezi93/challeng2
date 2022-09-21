@@ -142,18 +142,18 @@ validateDate();
 validatecvc();
 }
 
-btn.addEventListener("click", function(){
-    massvalidate();
-    if(massvalidate()==false){
-        event.preventDefault();
-    }else{
-        event.preventDefault();
-    }
-    form.classList.add("hiden");
-    thank.classList.remove("hiden");
-});
+btn.addEventListener("click", function (event) {
+        massvalidate();
+        if (massvalidate() == false) {
+            event.preventDefault();
+        } else {
+            event.preventDefault();
+        }
+        form.classList.add("hiden");
+        thank.classList.remove("hiden");
+    });
 
-conteniu.addEventListener("click",function(){
+conteniu.addEventListener("click",function(event){
     event.preventDefault();
     thank.classList.add("hiden");
     form.classList.remove("hiden");
