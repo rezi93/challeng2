@@ -2,7 +2,7 @@ let holder=document.getElementById("cardholdername");
 let numb=document.getElementById("cardnumber");
 let mOnth=document.getElementById("month");
 let yEar=document.getElementById("year");
-let cvc=document.querySelector("cvccard");
+let cvc=document.getElementById("cvccard");
 let subm=document.getElementById("submit");
 let display=document.querySelector(".cardholder");
 let displaynumber=document.querySelector(".card-number");
@@ -11,10 +11,11 @@ let year=document.querySelector(".date-year")
 let cardCvc=document.querySelector(".cvc");
 let details=document.querySelector(".carddetails");
 let thank=document.querySelector(".thank");
-let conteniu=document.getElementById("Continue");
+let conteniu=document.getElementById("Cont");
 let form=document.getElementById("form");
 let erormm=document.querySelector(".errors-MM");
 let eroryy=document.querySelector(".errors-yy");
+let btn=document.getElementById("submit");
 
 
 function innputName(){
@@ -122,5 +123,41 @@ if(yEar.value.match(expYear)){
 }else{
    eroryy.innerHTML="wrong format!";
 }
+
+function validatecvc(){
+    let erorcvc=document.querySelector(".errors-cvc");
+    let cvcexp=/^[0-9]{3}$/;
+    if(cvc.value===""){
+        erorcvc.innerHTML='can not be blank!';
+    }else if(cvcvalue.match(cvcexp)){
+        erorcvc.innerHTML="";
+    }else{
+        erorcvc.innerHTML='wrong format!'
+    }
 }
+
+validatename();
+cardnumbvalidation();
+validateDate();
+validatecvc();
+}
+
+btn.addEventListener("click", function(){
+    massvalidate();
+    if(massvalidate()==false){
+        event.preventDefault();
+    }else{
+        event.preventDefault();
+    }
+    form.classList.add("hiden");
+    thank.classList.remove("hiden");
+});
+
+conteniu.addEventListener("click",function(){
+    event.preventDefault();
+    thank.classList.add("hiden");
+    form.classList.remove("hiden");
+});
+
+
 

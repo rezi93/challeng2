@@ -144,5 +144,14 @@ input::placeholder{font-weight: 300;}
     color: white;
     cursor: pointer;
 }
+.thank.hiden{
+    display: none;
+
+}
+.hiden{display: none;}
+
+.attribution{
+    margin-top: 400px;
+}
 
 
